@@ -1,7 +1,7 @@
-var takeANumber = function(line) {
-  var num = 0
-  // var lineLength = line.length
-  return `You are number ${line.length} in line.`
+var takeANumber = function(line, name) {
+  line.push(name)
+  var lineLength = line.length
+  return `Welcome, ${name}. You are number ${lineLength} in line.`
 }
 
 var nowServing = function(line) {
@@ -24,7 +24,7 @@ var currentLine = function(line) {
     var str = ""
     
     for (var i = 0; i < line.length; i++) {
-      counterCall = counterCall + ` ${i + 1}. ${line[i]},`
+      str = str + ` ${i + 1}. ${line[i]},`
     }
     
     var strNames = str.slice(0, str.length - 1)
